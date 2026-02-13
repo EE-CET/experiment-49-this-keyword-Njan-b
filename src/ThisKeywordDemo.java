@@ -1,21 +1,26 @@
 import java.util.Scanner;
 
-class ThisDemo {
-    int value;
+class ThisKeywordDemo {
 
-    // TODO: Define setValue(int value)
-    // Use 'this.value = value' to resolve naming conflict
+    int value; 
+
+    void setValue(int value) {
+        this.value = value;  
+    }
+
     
-    // TODO: Define display() to print "Value: " + value
-}
+    void display() {
+        System.out.println("Value: " + value);
+    }
 
-public class ThisKeywordDemo {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        // TODO: Read the integer input
         
-        // TODO: Create ThisDemo object
-        // TODO: Call setValue() with the input
-        // TODO: Call display()
+        int input = sc.nextInt(); 
+        ThisKeywordDemo obj = new ThisKeywordDemo();
+        obj.setValue(input);
+        obj.display();
+        
+        sc.close();
     }
 }
